@@ -1,15 +1,10 @@
 import sys
-from PyQt6.QtWidgets import QApplication
-
-from ui.main_window import MainWindow
-
-
-def main():
-    app = QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
-    sys.exit(app.exec())
-
+from PySide6.QtWidgets import QApplication
+from src.ui.main_window import MainWindow
 
 if __name__ == "__main__":
-    main()
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.resize(1000, 700)
+    window.show()
+    sys.exit(app.exec())
